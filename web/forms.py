@@ -5,4 +5,4 @@ from .models import *
 class MyForm(forms.ModelForm):
     class Meta:
         model = TrafficSign
-        fields = ['name', 'car']
+        fields = ['image']
