@@ -20,4 +20,4 @@ from web.views import FormView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('form', FormView.as_view()),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

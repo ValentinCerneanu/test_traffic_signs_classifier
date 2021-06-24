@@ -1,6 +1,8 @@
 
 from django import forms
- 
-class MyForm(forms.Form):
-    name = forms.CharField()
-    image = forms.ImageField()
+from .models import *
+
+class MyForm(forms.ModelForm):
+    class Meta:
+        model = TrafficSign
+        fields = ['name', 'car']

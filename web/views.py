@@ -23,6 +23,8 @@ class FormView(View):
             print(img)
             print(name)
 
+            form.save()
+
         context['name'] = name
 
         return render(request, 'form.html', context)
