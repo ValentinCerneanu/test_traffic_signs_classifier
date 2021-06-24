@@ -67,6 +67,8 @@ class FormView(View):
         requests = req.get(url, stream=True)
         img = Image.open(requests.raw)
 
+        context['image_uploaded'] = url
+
         image_width = 32 
         image_height = 32 
         image_channels_after_preprocessing = 1
